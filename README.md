@@ -1,10 +1,20 @@
 # bjtu-bachelor-thesis
 
-## 2025年Patch
+# 2025年Patch
 
 * Fork自：https://github.com/paulzhn/bjtu-bachelor-thesis
+* 原README见 [2024年及以前的原README](#2024年及以前的原README)
 
-## 2024年及以前的原README
+## 如何在VSCode部署
+
+* 本人不常用latex，所以这里记录一下在本地部署的步骤，以便自己和其他人查阅
+* 为什么要在vscode上部署？
+  * 有copilot啊（逃）
+* 懒的写了，参考链接
+  * 优先：https://zhuanlan.zhihu.com/p/166523064
+  * 备选：https://zhuanlan.zhihu.com/p/435088542
+
+# 2024年及以前的原README
 
 本模板是北京交通大学本科毕业设计的非官方LaTeX模板，尽量还原了官方给出的word模板样式。尽管不能做到完全一致，但在肉眼看上去基本没有差别。我的LaTeX水平极其有限，因此这个模板追求的是能跑起来就行，里面代码是非常丑陋的。也希望如果有比较精通LaTeX模板的同学，能继续加以修改，让更多的人能够摆脱word的困扰。当然，如果学校能提供一份官方的LaTeX模板则是最好，目前研究生院已经提供了，还希望本科生院也能加把劲。
 
