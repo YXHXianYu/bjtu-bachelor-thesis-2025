@@ -13,6 +13,9 @@
 * 懒的写了，参考链接
   * 优先：https://zhuanlan.zhihu.com/p/166523064
   * 备选：https://zhuanlan.zhihu.com/p/435088542
+* Justfile备选
+  * Latex Workshop我这里没调清楚，所以我直接写了一个justfile，用命令行编译
+  * 具体参见 `justfile` 文件
 
 # 2024年及以前的原README
 
