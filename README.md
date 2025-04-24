@@ -8,18 +8,13 @@
 ## 如何在VSCode部署
 
 * 本人不常用latex，所以这里记录一下在本地部署的步骤，以便自己和其他人查阅
-
 * 为什么要在vscode上部署？
   * 有copilot啊（逃）
-  
 * 懒的写了，参考链接
   * 优先：https://zhuanlan.zhihu.com/p/166523064
   * 备选：https://zhuanlan.zhihu.com/p/435088542
-  
 * 命令行编译
-
   * VSCode的Latex插件并不是很好用，所以可以采用更直接的命令行编译
-
   * 编译命令
 
     ```bash
@@ -28,9 +23,7 @@
     xelatex -synctex=1 -interaction=nonstopmode -file-line-error template.tex
     xelatex -synctex=1 -interaction=nonstopmode -file-line-error template.tex
     ```
-
   * 详细参见模板根目录下的 `justfile`
-
 
 # 2024年及以前的原README
 

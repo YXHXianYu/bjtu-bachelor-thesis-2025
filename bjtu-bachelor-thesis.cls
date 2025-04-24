@@ -49,6 +49,7 @@
 \RequirePackage{algpseudocode}
 \RequirePackage{enumitem}
 \RequirePackage{xcolor}
+\RequirePackage{placeins} % 引入/FloatBarrier命令
 %========================================================================%
 % 北京交大明确给出的格式
 %========================================================================%
