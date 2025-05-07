@@ -375,7 +375,7 @@
 	\markboth{英文摘要}{}
 	\addcontentsline{toc}{part}{ABSTRACT}
 
-	\noindent\mysongti{\textbf{ABSTRACT:}} 
+	\noindent\mysongti{\textbf{ABSTRACT:}} \par
 	\noindent\eabstract \par
 
 	\vspace{2cm}
