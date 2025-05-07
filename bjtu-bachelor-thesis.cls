@@ -68,6 +68,7 @@
 \geometry{left=2.5cm,right=2.5cm,top=3.0cm,bottom=3.0cm,headheight=1.5cm,footskip=1.2cm}
 \setmainfont{Times New Roman}
 \linespread{1.4}\selectfont
+\raggedbottom
 \setlength{\baselineskip}{20pt}
 
 \renewcommand{\arraystretch}{1.2}
