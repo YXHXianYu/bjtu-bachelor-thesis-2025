@@ -231,21 +231,26 @@
 \defbibheading{myheading}[\zihao{-2}参考文献]{%
   \centering\chapter*{#1}
   \markboth{参考文献}{}}
+
 \defbibenvironment{bibliography}
   {\list
-     {}
-     {\setlength{\leftmargin}{2pt}%
-      \setlength{\itemindent}{2em}%
-      \setlength{\itemsep}{0pt}%
-      \setlength{\parsep}{\bibparsep}
-	  }}
+     {\printtext[labelnumberwidth]{%
+        \printfield{labelprefix}%
+        \printfield{labelnumber}}}
+     {
+      \setlength{\labelwidth}{2em}% 编号宽度
+      \setlength{\labelsep}{1em}% 编号和正文之间的距离
+      \setlength{\leftmargin}{\dimexpr\labelwidth+\labelsep}% 左边界 = 编号宽度 + 间隔
+      \setlength{\itemindent}{0pt}% 首行无缩进
+      \setlength{\itemsep}{0pt}% 条目之间无间距
+      \setlength{\parsep}{\bibparsep}%
+      \setlength{\listparindent}{\labelwidth}% 段落缩进 = labelwidth
+      \setlength{\hangindent}{0pt}% 禁止额外悬挂缩进
+     }}
   {\endlist}
   {\item
-  \zihao{5} \mysongti
-   \printtext[labelnumberwidth]{%
-     \printfield{labelprefix}%
-      \printfield{labelnumber}}%
-   \addspace}
+   \zihao{5} \mysongti
+  }
 
 
 %========================================================================%
