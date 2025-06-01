@@ -50,6 +50,7 @@
 \RequirePackage{enumitem}
 \RequirePackage{xcolor}
 \RequirePackage{placeins} % 引入/FloatBarrier命令
+\RequirePackage{titlesec}
 %========================================================================%
 % 北京交大明确给出的格式
 %========================================================================%
@@ -160,6 +161,17 @@
 	\fancyhead[R]{\zihao{4}\hwzs 正文\hspace*{0.5em}}
 }
 
+\fancypagestyle{mycopy}{%
+  % === 页眉：完全照搬 myfancy ===
+  \fancyhead[CE,CO]{}                                     % 清中栏
+  \fancyhead[L]{\zihao{4}\hwzs 北京交通大学毕业设计（论文）} % 左：固定文字
+  \fancyhead[R]{\zihao{4}\hwzs \leftmark}                 % 右：章标题
+  % === 页脚：全部清空 ===
+  \fancyfoot{}                                            % 不留任何页脚
+  % === 双横线页眉线（同 myfancy）===
+  \renewcommand{\headrule}{%
+     \hrule height 2.5pt \vspace{1pt}\hrule height 1pt}
+}
 
 
 \fancypagestyle{myempty}{
@@ -316,11 +328,14 @@
 }
 
 \newcommand{\ccopyright}{
-	\thispagestyle{myclear}
-	\vspace{2cm}
-	\begin{center}
-	{\zihao{-2}\heiti 学士论文版权使用授权书\bigskip}
-	\end{center}
+	\chapter*{\makebox[\linewidth]{\zihao{-2}学士论文版权使用授权书}}
+    \markboth{版权使用授权书}{} % ← 更新右侧页眉文字
+	\thispagestyle{mycopy}
+	% \vspace{2cm}
+	% \begin{center}
+	% {\zihao{-2}\heiti 学士论文版权使用授权书\bigskip}
+	% \end{center}
+    
 
 	本学士论文作者完全了解北京交通大学有关保留、使用学士论文的规定。特授权北京交通大学可以将学士论文的全部或部分内容编入有关数据库进行检索，提供阅览服务，并采用影印、缩印或扫描等复制手段保存、汇编以供查阅和借阅。\\
 	\begin{center}
@@ -341,6 +356,54 @@
 	\end{minipage} 	
 	\newpage
 }
+
+\newcommand{\coriginality}{
+	\chapter*{\makebox[\linewidth]{\zihao{-2}学士论文诚信声明}}
+    \markboth{论文诚信声明}{} % ← 更新右侧页眉文字
+	\thispagestyle{mycopy}
+
+    本人声明所呈交的毕业论文（设计），题目\underline{\hspace{6.5cm}}是本人在指导教师的指导下，独立进行研究工作所取得的成果。尽我所知，除了文中特别加以标注和致谢中所罗列的内容以外，论文中不包含其他人已经发表或撰写过的研究成果，也不包含为获得北京交通大学或其他教育机构的学位或证书而使用过的材料。
+    
+    申请学位论文与资料若有不实之处，本人承担一切相关责任。
+
+    \vspace{1\baselineskip}
+
+    \begin{minipage}[t]{0.4\textwidth}
+	本人签名：\underline{\hspace{3.8cm}}
+	\end{minipage} 
+	\hfill
+	\begin{minipage}[t]{0.52\textwidth}
+	日期：\underline{\hspace{5cm}}
+	\end{minipage} 	
+	\newpage
+}
+
+% \newcommand{\ccopyright}{
+% 	\thispagestyle{myclear}
+% 	\vspace{2cm}
+% 	\begin{center}
+% 	{\zihao{-2}\heiti 学士论文版权使用授权书\bigskip}
+% 	\end{center}
+
+% 	本学士论文作者完全了解北京交通大学有关保留、使用学士论文的规定。特授权北京交通大学可以将学士论文的全部或部分内容编入有关数据库进行检索，提供阅览服务，并采用影印、缩印或扫描等复制手段保存、汇编以供查阅和借阅。\\
+% 	\begin{center}
+% 	（保密的学位论文在解密后适用本授权说明）
+% 	\end{center}
+% 	\vspace{3cm}
+
+% 	\begin{minipage}[t]{0.5\textwidth}
+% 	学位论文作者签名：\authorsign
+
+% 	签字日期：\authorsigndate
+% 	\end{minipage} 
+% 	\hfill
+% 	\begin{minipage}[t]{0.4\textwidth}
+% 	指导教师签名：\tutorsign
+
+% 	签字日期：\tutorsigndate
+% 	\end{minipage} 	
+% 	\newpage
+% }
 
 \newcommand{\myclpage}{
 	\thispagestyle{myclear}
@@ -380,7 +443,7 @@
 	\markboth{英文摘要}{}
 	\addcontentsline{toc}{part}{ABSTRACT}
 
-	\noindent\mysongti{\textbf{ABSTRACT:}} \par
+	\noindent\mysongti{\textbf{ABSTRACT:}}
 	\noindent\eabstract \par
 
 	\vspace{2cm}
